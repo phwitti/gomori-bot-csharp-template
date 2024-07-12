@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phwitti.Gomori", "Phwitti.Gomori\Phwitti.Gomori.csproj", "{890BAA1C-A04A-4BC8-BCE4-CCA2E38B0FC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phwitti.GomoriShell", "Phwitti.GomoriShell\Phwitti.GomoriShell.csproj", "{6E779878-7589-4ED3-AA0E-A1002A26C4F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phwitti.PlayingCards", "Phwitti.PlayingCards\Phwitti.PlayingCards.csproj", "{51AE0E5E-B96A-4113-A25C-E0F5E4147B75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phwitti.Gomori.Tests", "Phwitti.Gomori.Tests\Phwitti.Gomori.Tests.csproj", "{D7CB7278-2CFB-40E1-A1B0-9FA8FC238E07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phwitti.GomoriBot", "Phwitti.GomoriBot\Phwitti.GomoriBot.csproj", "{4873F32D-FC35-44BE-B576-61B6C27BA6B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{890BAA1C-A04A-4BC8-BCE4-CCA2E38B0FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{890BAA1C-A04A-4BC8-BCE4-CCA2E38B0FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{890BAA1C-A04A-4BC8-BCE4-CCA2E38B0FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{890BAA1C-A04A-4BC8-BCE4-CCA2E38B0FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E779878-7589-4ED3-AA0E-A1002A26C4F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E779878-7589-4ED3-AA0E-A1002A26C4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E779878-7589-4ED3-AA0E-A1002A26C4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E779878-7589-4ED3-AA0E-A1002A26C4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51AE0E5E-B96A-4113-A25C-E0F5E4147B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51AE0E5E-B96A-4113-A25C-E0F5E4147B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51AE0E5E-B96A-4113-A25C-E0F5E4147B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51AE0E5E-B96A-4113-A25C-E0F5E4147B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7CB7278-2CFB-40E1-A1B0-9FA8FC238E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7CB7278-2CFB-40E1-A1B0-9FA8FC238E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7CB7278-2CFB-40E1-A1B0-9FA8FC238E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7CB7278-2CFB-40E1-A1B0-9FA8FC238E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4873F32D-FC35-44BE-B576-61B6C27BA6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4873F32D-FC35-44BE-B576-61B6C27BA6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4873F32D-FC35-44BE-B576-61B6C27BA6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4873F32D-FC35-44BE-B576-61B6C27BA6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
