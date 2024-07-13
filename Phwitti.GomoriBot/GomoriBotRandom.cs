@@ -1,19 +1,22 @@
 ﻿using Phwitti.Gomori;
 using System.Collections.Generic;
 
-public class GomoriBotRandom : GomoriBotBase
+namespace Phwitti.GomoriBot
 {
-    public override Action? GetActionForBoardAndHand(Board _board, Hand _hand)
+    public class GomoriBotRandom : GomoriBotBase
     {
-        List<Action> actions = new();
-
-        foreach (var card in _hand.Cards)
+        public override Action? GetActionForBoardAndHand(Board _board, Hand _hand)
         {
-            actions.AddRange(_board.GetValidActions(card));
-        }
+            List<Action> actions = new();
 
-        return actions.Count == 0
-             ? null
-             : actions[Phwitti.PlayingCards.ShuffleUtils.RandomInstance.Next(actions.Count)];
+            foreach (var card in _hand.Cards)
+            {
+                actions.AddRange(_board.GetValidActions(card));
+            }
+
+            return actions.Count == 0
+                 ? null
+                 : actions[Phwitti.PlayingCards.ShuffleUtils.RandomInstance.Next(actions.Count)];
+        }
     }
 }

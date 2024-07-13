@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Phwitti.Gomori;
+using Phwitti.GomoriBot;
 using Phwitti.GomoriShell;
 using System;
 using System.Linq;
@@ -9,7 +10,7 @@ public class Program
 {
     static void Main(string[] args)
     {
-        GomoriBotBase bot = new GomoriBotRandom();
+        GomoriBotBase bot = new GomoriBotGreedySimple();
         Console.InputEncoding = Encoding.UTF8;
         Console.OutputEncoding = Encoding.UTF8;
 
