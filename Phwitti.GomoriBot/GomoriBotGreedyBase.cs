@@ -7,22 +7,22 @@ namespace Phwitti.GomoriBot
     {
         public override Action? GetActionForBoardAndHand(Board _board, Hand _hand)
         {
-            int iMaxRating = int.MinValue;
+            float fMaxRating = float.NegativeInfinity;
             List<Action> actions = new();
 
             foreach (var card in _hand.Cards)
             {
                 foreach (var action in _board.GetValidActions(card))
                 {
-                    int iRating = this.GetRatingForAction(_board, _hand, action);
+                    float fRating = this.GetRatingForAction(_board, _hand, action);
 
-                    if (iRating > iMaxRating)
+                    if (fRating > fMaxRating)
                     {
                         actions.Clear();
-                        iMaxRating = iRating;
+                        fMaxRating = fRating;
                     }
 
-                    if (iRating == iMaxRating)
+                    if (fRating == fMaxRating)
                     {
                         actions.Add(action);
                     }
@@ -31,9 +31,9 @@ namespace Phwitti.GomoriBot
 
             return actions.Count == 0
                  ? null
-                 : actions[Phwitti.PlayingCards.ShuffleUtils.RandomInstance.Next(actions.Count)];
+                 : actions[PlayingCards.ShuffleUtils.RandomInstance.Next(actions.Count)];
         }
 
-        public abstract int GetRatingForAction(Board _board, Hand _hand, Action _action);
+        public abstract float GetRatingForAction(Board _board, Hand _hand, Action _action);
     }
 }
