@@ -4,7 +4,7 @@ namespace Phwitti.GomoriBot
 {
     public class GomoriBotGreedySimple : GomoriBotGreedyBase
     {
-        public override float GetRatingForAction(Board _board, Hand _hand, Action _action)
+        public override float GetRatingForAction(IReadOnlyBoard _board, Hand _hand, Action _action)
         {
             var result = new Board(_board).Apply(_action);
 

@@ -5,7 +5,7 @@ namespace Phwitti.GomoriBot
 {
     public abstract class GomoriBotGreedyBase : GomoriBotBase
     {
-        public override Action? GetActionForBoardAndHand(Board _board, Hand _hand)
+        public override Action? GetActionForBoardAndHand(IReadOnlyBoard _board, Hand _hand)
         {
             float fMaxRating = float.NegativeInfinity;
             List<Action> actions = new();
@@ -34,6 +34,6 @@ namespace Phwitti.GomoriBot
                  : actions[PlayingCards.ShuffleUtils.RandomInstance.Next(actions.Count)];
         }
 
-        public abstract float GetRatingForAction(Board _board, Hand _hand, Action _action);
+        public abstract float GetRatingForAction(IReadOnlyBoard _board, Hand _hand, Action _action);
     }
 }

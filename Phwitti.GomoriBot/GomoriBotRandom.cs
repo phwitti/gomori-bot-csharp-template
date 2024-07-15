@@ -5,7 +5,7 @@ namespace Phwitti.GomoriBot
 {
     public class GomoriBotRandom : GomoriBotBase
     {
-        public override Action? GetActionForBoardAndHand(Board _board, Hand _hand)
+        public override Action? GetActionForBoardAndHand(IReadOnlyBoard _board, Hand _hand)
         {
             List<Action> actions = new();
 

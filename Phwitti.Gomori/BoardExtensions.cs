@@ -6,7 +6,7 @@ namespace Phwitti.Gomori
 {
     public static class BoardExtensions
     {
-        public static IEnumerable<Action> GetValidActions(this Board _board, Card _card)
+        public static IEnumerable<Action> GetValidActions(this IReadOnlyBoard _board, Card _card)
         {
             foreach (var playAction in _board.GetValidPlayActions(_card))
                 yield return new Action
@@ -16,7 +16,7 @@ namespace Phwitti.Gomori
                 };
         }
 
-        public static IEnumerable<MoveAction> GetValidMoveActions(this Board _board)
+        public static IEnumerable<MoveAction> GetValidMoveActions(this IReadOnlyBoard _board)
         {
             if (_board.IsEmpty)
             {
@@ -34,19 +34,19 @@ namespace Phwitti.Gomori
                     yield return new MoveAction() { HorizontalMovement = horizontal, VerticalMovement = vertical };
         }
 
-        public static IEnumerable<HorizontalMovement> GetValidMoveActionsHorizontal(this Board _board)
+        public static IEnumerable<HorizontalMovement> GetValidMoveActionsHorizontal(this IReadOnlyBoard _board)
         {
             foreach (var movement in HorizontalMovementUtils.All.Where(_board.CanMove))
                 yield return movement;
         }
 
-        public static IEnumerable<VerticalMovement> GetValidMoveActionsVertical(this Board _board)
+        public static IEnumerable<VerticalMovement> GetValidMoveActionsVertical(this IReadOnlyBoard _board)
         {
             foreach (var movement in VerticalMovementUtils.All.Where(_board.CanMove))
                 yield return movement;
         }
 
-        public static IEnumerable<PlayAction> GetValidPlayActions(this Board _board, Card _card)
+        public static IEnumerable<PlayAction> GetValidPlayActions(this IReadOnlyBoard _board, Card _card)
         {
             foreach (var target in FieldDefinition.All)
             {

@@ -26,7 +26,7 @@ public class Program
 
             switch (request.Type)
             {
-                case JsonObjectRequestType.StartGame:
+                case JsonObjectRequestType.NewGame:
                     bot.Initialize(request.Color.ToDeckColor());
                     Console.WriteLine(JsonConvert.SerializeObject(JsonObjectResponse.Okay));
                     break;

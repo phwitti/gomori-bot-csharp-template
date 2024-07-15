@@ -6,6 +6,9 @@ namespace Phwitti.Gomori
 {
     public interface IReadOnlyBoard
     {
+        bool IsEmpty { get; }
+        bool CanMove(HorizontalMovement _eHorizontalMovement);
+        bool CanMove(VerticalMovement _eVerticalMovement);
         IReadOnlyStack GetReadOnlyStack(FieldDefinition _fieldDefinition);
         bool LooksAlike(IReadOnlyBoard _other);
     }
@@ -40,13 +43,16 @@ namespace Phwitti.Gomori
                 out m_descendingDiagonal);
         }
 
-        public Board(Board _other)
+        public Board(IReadOnlyBoard _other)
         {
+            // TODO: should use actual interface for GetReadOnlyStack
+            Board other = (Board)_other;
+
             m_arStacks = new Stack[16] {
-                new Stack(_other.m_arStacks[0]), new Stack(_other.m_arStacks[1]), new Stack(_other.m_arStacks[2]), new Stack(_other.m_arStacks[3]),
-                new Stack(_other.m_arStacks[4]), new Stack(_other.m_arStacks[5]), new Stack(_other.m_arStacks[6]), new Stack(_other.m_arStacks[7]),
-                new Stack(_other.m_arStacks[8]), new Stack(_other.m_arStacks[9]), new Stack(_other.m_arStacks[10]), new Stack(_other.m_arStacks[11]),
-                new Stack(_other.m_arStacks[12]), new Stack(_other.m_arStacks[13]), new Stack(_other.m_arStacks[14]), new Stack(_other.m_arStacks[15])};
+                new Stack(other.m_arStacks[0]), new Stack(other.m_arStacks[1]), new Stack(other.m_arStacks[2]), new Stack(other.m_arStacks[3]),
+                new Stack(other.m_arStacks[4]), new Stack(other.m_arStacks[5]), new Stack(other.m_arStacks[6]), new Stack(other.m_arStacks[7]),
+                new Stack(other.m_arStacks[8]), new Stack(other.m_arStacks[9]), new Stack(other.m_arStacks[10]), new Stack(other.m_arStacks[11]),
+                new Stack(other.m_arStacks[12]), new Stack(other.m_arStacks[13]), new Stack(other.m_arStacks[14]), new Stack(other.m_arStacks[15])};
 
             this.InitializeColumnsDiagonalsAndRows(
                 out m_arRows,

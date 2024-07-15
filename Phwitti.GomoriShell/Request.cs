@@ -8,7 +8,7 @@ namespace Phwitti.GomoriShell
     [JsonConverter(typeof(StringEnumConverter))]
     public enum JsonObjectRequestType
     {
-        StartGame,
+        NewGame,
         PlayFirstTurn,
         PlayTurn,
         Bye

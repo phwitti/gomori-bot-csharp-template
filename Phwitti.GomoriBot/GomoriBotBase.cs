@@ -37,7 +37,7 @@ namespace Phwitti.GomoriBot
             } while (bShouldPlayAnotherCard);
         }
 
-        public abstract Action? GetActionForBoardAndHand(Board _board, Hand _hand);
+        public abstract Action? GetActionForBoardAndHand(IReadOnlyBoard _board, Hand _hand);
 
         //
 

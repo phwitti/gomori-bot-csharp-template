@@ -14,7 +14,7 @@ namespace Phwitti.Gomori
         IReadOnlyHand
     {
         public new IReadOnlyList<Card> Cards
-            => base.Cards.Where(x => x is Card).Select(x => (x as Card?).Value ).ToList();
+            => base.Cards.Where(x => x is Card).Select(x => (x as Card?)!.Value ).ToList();
 
         //
 
